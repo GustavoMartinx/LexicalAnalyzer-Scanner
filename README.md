@@ -1,4 +1,4 @@
-<h1 align='center'> Lexical Analyzer </h1>
+<h1 align='center'> Lexical Analyzer (Scanner) </h1>
 
 
 
