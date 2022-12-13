@@ -1,6 +1,11 @@
 from automata.fa.Moore import Moore
+from sys import argv, exit
 
-file = open("./inputs/test-001.cm")
+if(len(argv) != 2):
+    print("Please, insert a param file.")
+    exit()
+
+arq = open(argv[1])
 
 moore = Moore(['q0', 'id', 'i', 'in', 'int','INT', 'int*', 'if', 'IF', 'if*', 'e','el', 'els', 'else', 'ELSE','else*', 'r', 're', 'ret', 'retu', 'retur', 'return', 'RETURN','return*', 
                'v', 'vo', 'voi', 'void', 'VOID', 'void*', 'w', 'wh', 'whi', 'whil', 'while', 'WHILE', 'while*', 'f', 'fl', 'flo', 'floa', 'float', 'FLOAT', 'float*', 'fo', 'for', 'FOR', 
@@ -2251,25 +2256,25 @@ moore = Moore(['q0', 'id', 'i', 'in', 'int','INT', 'int*', 'if', 'IF', 'if*', 'e
             
                 {
                 'q0' : '',
-                'id' : 'ID',
+                'id' : 'ID\n',
                 'i' : '',
                 'in' : '',
                 'int' : '',
-                'INT' : 'INT',
+                'INT' : 'INT\n',
                 'int*' : '',
                 'if' : '',
-                'IF' : 'IF',
+                'IF' : 'IF\n',
                 'e' : '',
                 'el' : '',
                 'els' : '',
                 'else' : '',
-                'ELSE' : 'ELSE',
+                'ELSE' : 'ELSE\n',
                 'else*' : '',
                 'v' : '',
                 'vo' : '',
                 'voi' : '',
                 'void' : '',
-                'VOID' : 'VOID',
+                'VOID' : 'VOID\n',
                 'void*' : '',
                 'r' : '',
                 're' : '',
@@ -2277,51 +2282,51 @@ moore = Moore(['q0', 'id', 'i', 'in', 'int','INT', 'int*', 'if', 'IF', 'if*', 'e
                 'retu' : '',
                 'retur' : '',
                 'return' : '',
-                'RETURN' : 'RETURN',
+                'RETURN' : 'RETURN\n',
                 'return*' : '',
                 'w' : '',
                 'wh' : '',
                 'whi' : '',
                 'whil' : '',
                 'while' : '',
-                'WHILE' : 'WHILE',
+                'WHILE' : 'WHILE\n',
                 'while*' : '',
                 'f' : '',
                 'fl' : '',
                 'flo' : '',
                 'floa' : '',
                 'float' : '',
-                'FLOAT' : 'FLOAT',
+                'FLOAT' : 'FLOAT\n',
                 'float*' : '',
                 'fo' : '',
                 'for' : '',
-                'FOR' : 'FOR',
+                'FOR' : 'FOR\n',
                 'for*' : '',
-                'PLUS' : 'PLUS',
-                'MINUS' : 'MINUS',
-                'TIMES' : 'TIMES',
-                'DIVIDE' : 'DIVIDE',
+                'PLUS' : 'PLUS\n',
+                'MINUS' : 'MINUS\n',
+                'TIMES' : 'TIMES\n',
+                'DIVIDE' : 'DIVIDE\n',
                 '<' : '',
-                'LESS' : 'LESS',
-                'LESS_EQUAL' : 'LESS_EQUAL',
+                'LESS' : 'LESS\n',
+                'LESS_EQUAL' : 'LESS_EQUAL\n',
                 '>' : '',
-                'GREATER' : 'GREATER',
-                'GREATER_EQUAL' : 'GREATER_EQUAL',
+                'GREATER' : 'GREATER\n',
+                'GREATER_EQUAL' : 'GREATER_EQUAL\n',
                 '=' : '',
-                'ATTRIBUTION' : 'ATTRIBUTION',
-                'EQUALS' : 'EQUALS',
+                'ATTRIBUTION' : 'ATTRIBUTION\n',
+                'EQUALS' : 'EQUALS\n',
                 '!' : '',
-                'DIFFERENT' : 'DIFFERENT',
-                'LPAREN' : 'LPAREN',
-                'RPAREN' : 'RPAREN',
-                'LBRACKETS' : 'LBRACKETS',
-                'RBRACKETS' : 'RBRACKETS',
-                'LBRACES' : 'LBRACES',
-                'RBRACES' : 'RBRACES',
-                'SEMICOLON' : 'SEMICOLON',
-                'COMMA' : 'COMMA',
+                'DIFFERENT' : 'DIFFERENT\n',
+                'LPAREN' : 'LPAREN\n',
+                'RPAREN' : 'RPAREN\n',
+                'LBRACKETS' : 'LBRACKETS\n',
+                'RBRACKETS' : 'RBRACKETS\n',
+                'LBRACES' : 'LBRACES\n',
+                'RBRACES' : 'RBRACES\n',
+                'SEMICOLON' : 'SEMICOLON\n',
+                'COMMA' : 'COMMA\n',
                 'num' : '',
-                'NUMBER' : 'NUMBER',
+                'NUMBER' : 'NUMBER\n',
                 'SPACE' : '',
                 'letters' : '',
                 'ç' : '',
@@ -2330,19 +2335,19 @@ moore = Moore(['q0', 'id', 'i', 'in', 'int','INT', 'int*', 'if', 'IF', 'if*', 'e
                 }
 )
 
-print(moore)
+# print(moore)
 
 separators = [' ', '(', ')', '[', ']', '{', '}', ',', ';', '\n', '\t']
 buff = ''
 sep_size = len(separators)
 
-for line in file:
+for line in arq:
     for char in line:
         if char not in separators:
             buff += char
         if char in separators:
             buff += 'ç'
-            print(moore.get_output_from_string(buff))
-            print(moore.get_output_from_string(char))
+            print(moore.get_output_from_string(buff), end='')
+            print(moore.get_output_from_string(char), end='')
             buff = ''
                 
