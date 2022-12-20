@@ -1,6 +1,6 @@
 <h1 align='center'> Lexical Analyzer (Scanner) </h1>
 
-<p align='center'> This Lexical Analyzer (or Scanner) for the C- language was made in Python using a Moore Machine applying knowledge from Theory of Computing.</p> <br> <br>
+<p align='center'> This Lexical Analyzer (or Scanner) for the C- language was made in Python using a Moore Machine applying knowledge from Theory of Computing.</p> <br>
 
 
 
