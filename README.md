@@ -1,17 +1,9 @@
 <h1 align='center'> Lexical Analyzer (Scanner) </h1>
 
-<p align='center'> This Lexical Analyzer (or Scanner) for the C- language was made in Python using a Moore Machine applying knowledge from Theory of Computing.</p> <br>
-
-
-
-<h1 align='center'> Analizador Léxico </h1>
-
-<p align='center'> O objetivo deste trabalho foi projetar e implementar um autômato com saída, do tipo
-Máquina de Moore que funcione como um Analisador Léxico para a linguagem de programação C-, colocando
-em prática, dessa forma, conceitos estudados da disciplina de Teoria da Computação (ou Linguagens Formais, Autômatos e Computabilidade).</p> <br>
-
+<p align='center'> This Lexical Analyzer (or Scanner) for the C- language was made in Python using a Moore Machine applying knowledge from Theory of Computing.</p> 
 
 <br>
+
 
 <h1 align='center'> How to Execute and How It Works </h1>
 
@@ -32,12 +24,23 @@ python lexical_analyzer.py <test_file.cm>
 where ```<test_file.cm>``` is the name of the C- source file that will be received as input.
 
 
-<br> <br>
+<br> <br> <br>
+
+
+<h1 align='center'> Analizador Léxico </h1>
+
+<p align='center'> O objetivo deste trabalho foi projetar e implementar um autômato com saída, do tipo
+Máquina de Moore que funcione como um Analisador Léxico para a linguagem de programação C-, colocando
+em prática, dessa forma, conceitos estudados da disciplina de Teoria da Computação (ou Linguagens Formais, Autômatos e Computabilidade).</p> <br>
+
+
+<br>
+
 
 <h1 align='center'> Como Executar e Funcionamento </h1>
 
 O programa recebe como entrada um código-fonte
-na linguagem C- e, como saída, gera uma lista de tokens.
+na linguagem C- e, como saída, gera uma lista de tokens. Veja mais detalhes sobre como este trabalho foi feito no relatório técnico -  `Report.pdf`
 
 <br>Antes de executar, faz-se necessário a instalação de dependências, como a linguagem de programação Python e após tê-la devidamente instalada, será necessária a instalação de uma de suas bibliotecas, a ```automata-python```. Para tanto: <br>
 * Acesse o [site oficial](https://www.python.org/downloads/) para obter mais informações sobre a linguagem Python e realize sua instalação. <br> 
