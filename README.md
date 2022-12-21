@@ -5,7 +5,7 @@
 <br>
 
 
-<h1 align='center'> How to Execute and How It Works </h1>
+<h2 align='center'> How to Execute and How It Works </h2>
 
 The program receives a source code as input
 in the C- language and as output generates a list of tokens.
@@ -37,7 +37,7 @@ em prática, dessa forma, conceitos estudados da disciplina de Teoria da Computa
 <br>
 
 
-<h1 align='center'> Como Executar e Funcionamento </h1>
+<h2 align='center'> Como Executar e Funcionamento </h2>
 
 O programa recebe como entrada um código-fonte
 na linguagem C- e, como saída, gera uma lista de tokens. Veja mais detalhes sobre como este trabalho foi feito no relatório técnico -  `Report.pdf`
